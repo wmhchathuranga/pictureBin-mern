@@ -3,6 +3,7 @@ import Navigations from './NavList';
 import Logo from './Logo';
 import ThemeToggler from './ThemeToggler';
 
+
 export default function NavBar() {
 
     const [isDark, setIsDark] = useState(null);

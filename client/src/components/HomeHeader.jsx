@@ -9,7 +9,7 @@ export default function HomeHeader() {
       <div className="flex flex-col justify-center items-center h-4/6 md:w-1/2 rounded-lg border-dashed border-green-500 border-2">
         <div className="md:w-1/2 space-y-3 mb-4">
           <p className='dark:text-white text-center font-bold text-lg' style={{ fontFamily: "Inter" }}>We Provide...</p>
-          <p className='dark:text-white text-center text-3xl pb-3 font-sans font-bold main-header mb-4'>A Reliable Online Gallery for everyone. <br /> <br className='block md:hidden' />
+          <p className='dark:text-white text-center text-3xl pb-3 font-sans font-bold main-header'>A Reliable Online Gallery for everyone. <br /> <br className='block md:hidden' />
             <hr className='my-4' />
             <TypeAnimation
               sequence={[
@@ -31,9 +31,10 @@ export default function HomeHeader() {
           </p>
 
         </div>
-        <button className="button shadow shadow-black dark:bg-lightGreen md:dark:bg-slate-800 ">
+        <input type="file" name="file" id="file" hidden />
+        <button className="button shadow shadow-black dark:bg-lightGreen md:dark:bg-slate-800" onClick={() => document.getElementById('file').click()}>
           <span className="button-content text-slate-700 md:dark:text-white md:font-normal font-bold" style={{ fontFamily: "Inter" }}>
-            <FontAwesomeIcon icon={faComputer} className="fa-computer" /> &nbsp; Add From Computer
+            <FontAwesomeIcon icon={faComputer} className="fa-computer" /> &nbsp; Add From Device
           </span>
         </button>
       </div>
