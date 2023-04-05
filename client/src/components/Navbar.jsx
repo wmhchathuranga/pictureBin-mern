@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navigations from './NavList';
 import Logo from './Logo';
 import ThemeToggler from './ThemeToggler';
@@ -11,7 +11,7 @@ export default function NavBar() {
         if (window.matchMedia('(prefers-color-scheme: dark)').matches)
             setIsDark(true);
         else
-            setIsDark(false);
+            setIsDark(true);
     }, [])
 
     useEffect(
@@ -25,16 +25,23 @@ export default function NavBar() {
 
     return (
         <div className="nav-bar bg-slate-100 dark:bg-slate-900 px-3 py-2 dark:shadow-white shadow-sm">
-            <div className="flex items-center md:justify-between px-5 cursor-pointer justify-center md:py-1 py-3">
+            <div className="flex items-center md:justify-between px-5 justify-center py-1">
+
 
                 {/* logo */}
+
                 <Logo dark={isDark} />
+
+
 
                 {/* navbar */}
                 <Navigations />
 
+
+
                 {/* themeToggler */}
                 <ThemeToggler dark={isDark} setDark={setIsDark} />
+
 
             </div>
 
