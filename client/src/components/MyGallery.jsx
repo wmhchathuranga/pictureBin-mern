@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Gallery } from "react-grid-gallery";
+import { Link } from 'react-router-dom';
 
 export class MyGallery extends Component {
 
@@ -62,7 +63,9 @@ export class MyGallery extends Component {
         return (
             <div className='flex justify-center'>
                 <div className='mt-5 w-5/6'>
-                    <Gallery images={images} margin={5} tagStyle={{ borderRadius: 5 }} enableImageSelection={false} />
+                    <Link to={"/single"}>
+                        <Gallery images={images} margin={5} tagStyle={{ borderRadius: 5 }} enableImageSelection={false} />
+                    </Link>
                 </div>
             </div>
         )

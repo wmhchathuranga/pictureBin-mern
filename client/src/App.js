@@ -2,6 +2,7 @@ import NavBar from './components/Navbar';
 import HomeHeader from './components/HomeHeader';
 import MyGallery from './components/MyGallery';
 import { Routes, Route } from 'react-router-dom'
+import Single from './components/Single';
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
         <Route path='/' element={<HomeHeader />} />
 
         <Route path='/gallery' element={<MyGallery />} />
+
+        <Route path='/single' element={<Single />} />
 
       </Routes>
     </div>
