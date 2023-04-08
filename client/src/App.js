@@ -16,7 +16,7 @@ function App() {
 
         <Route path='/gallery' element={<MyGallery />} />
 
-        <Route path='/single' element={<Single />} />
+        <Route path='/single/:index' element={<Single />} />
 
       </Routes>
     </div>
